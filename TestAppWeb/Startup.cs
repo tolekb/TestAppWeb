@@ -32,7 +32,7 @@ namespace TestAppWeb
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddDbContext<ApplicationDbContext>(
                 options =>
-                    options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test"));
+                    options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TestAppDB"));
             services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
         }
 
