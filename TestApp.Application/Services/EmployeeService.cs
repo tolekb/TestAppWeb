@@ -39,6 +39,11 @@ namespace TestApp.Application.Services
             return await dbContext.Employees.FindAsync(id);
         }
 
+        public async Task<IEnumerable<Employee>> Get(Guid[] ids)
+        {
+            return await dbContext.Employees.Where(p => ids.Contains(p.Id)).ToListAsync();
+        }
+
         public async Task<IEnumerable<Employee>> GetAll()
         {
             return await dbContext.Employees.ToListAsync();

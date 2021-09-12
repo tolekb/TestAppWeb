@@ -14,5 +14,6 @@ namespace TestApp.Application.Interfaces
         void Update(Guid id, Employee value);
         void Add(Employee value);
         Task<Employee> Get(Guid id);
+        Task<IEnumerable<Employee>> Get(Guid[] id);
     }
 }

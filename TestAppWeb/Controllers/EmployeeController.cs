@@ -33,6 +33,12 @@ namespace TestAppWeb.Controllers
             return await service.Get(id);
         }
 
+        [HttpGet("{ids}")]
+        public async Task<IEnumerable<Employee>> Get(Guid[] ids)
+        {
+            return await service.Get(ids);
+        }
+
         // POST api/<EmployeeController>
         [HttpPost]
         public async void Post([FromBody] Employee value)
